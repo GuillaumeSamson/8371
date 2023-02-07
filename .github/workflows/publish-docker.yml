@@ -40,12 +40,3 @@ jobs:
           push: true
           no-cache: true
           tags: ghcr.io/guillaumesamson/8371:latest
-
-      - name: Build and push devel image
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          file: "docker/devel-gui.Dockerfile"
-          push: true
-          no-cache: true
-          tags:  ghcr.io/guillaumesamson/8371:devel
