@@ -39,7 +39,7 @@ jobs:
           file: "docker/moa-gui.Dockerfile"
           push: true
           no-cache: true
-          tags: ghcr.io/waikato/moa:latest
+          tags: ghcr.io/GuillaumeSamson/8371:latest
 
       - name: Build and push devel image
         uses: docker/build-push-action@v3
@@ -48,4 +48,4 @@ jobs:
           file: "docker/devel-gui.Dockerfile"
           push: true
           no-cache: true
-          tags: ghcr.io/waikato/moa:devel
+          tags:  ghcr.io/GuillaumeSamson/8371:devel
