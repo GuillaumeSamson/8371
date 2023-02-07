@@ -1,8 +1,7 @@
 name: Publish MOA Docker image
 
 on:
-  push:
-    tags: ['*']
+  [push]
 
 env:
   REGISTRY: ghcr.io
