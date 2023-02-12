@@ -12,5 +12,8 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - uses: s4u/maven-settings-action@v2.8.0
+        with:
+          mirrors: '[{"id": "mirrorId", "name": "mirrorName", "mirrorOf": "mirrorOf", "url": "mirrorUrl"}]'
       - name: Build with Maven
         run: mvn clean test
