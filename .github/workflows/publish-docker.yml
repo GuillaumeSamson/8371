@@ -14,6 +14,6 @@ jobs:
           distribution: 'temurin'
       - uses: s4u/maven-settings-action@v2.8.0
         with:
-          mirrors: '[{"id": "mirrorId", "name": "mirrorName", "mirrorOf": "mirrorOf", "url": "mirrorUrl"}]'
+          mirrors: '[{"id": "maven-default-http-blocker", "name": "Pseudo repository to mirror external repositories initially using HTTP.", "mirrorOf": "external:dummy:*", "url": "http://0.0.0.0/"}]'
       - name: Build with Maven
         run: mvn clean test
