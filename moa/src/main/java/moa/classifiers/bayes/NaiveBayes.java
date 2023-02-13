@@ -193,4 +193,37 @@ public class NaiveBayes extends AbstractClassifier  implements MultiClassClassif
         else
             return new ImmutableCapabilities(Capability.VIEW_STANDARD);
     }
+
+    public static class DummyBayes extends AbstractClassifier  implements MultiClassClassifier,
+            CapabilitiesHandler {
+
+        public double[] getVotesForInstance(Instance inst) {
+            return new double[]{0, 0};
+        }
+
+        @Override
+        public void resetLearningImpl() {
+            return;
+        }
+
+        @Override
+        public void trainOnInstanceImpl(Instance inst) {
+            return;
+        }
+
+        @Override
+        protected Measurement[] getModelMeasurementsImpl() {
+            return null;
+        }
+
+        @Override
+        public void getModelDescription(StringBuilder out, int indent) {
+            return;
+        }
+
+        @Override
+        public boolean isRandomizable() {
+            return false;
+        }
+    }
 }
